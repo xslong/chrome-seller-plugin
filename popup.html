@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="aes.js"></script>
+    <style type="text/css">
+
+        .field {
+            width: 60px;
+        }
+
+        table {
+            font-size: 12px;
+            border-collapse: collapse;
+            border: 0;
+        }
+
+        table td {
+            padding: 5px 10px;
+            border-top: 0;
+            border-right: 1px dotted #c0c0c0;
+            border-bottom: 1px dotted #c0c0c0;
+            border-left: 0;
+        }
+
+        td:last-of-type {
+            border-right: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+<table width="305px" border="0">
+    <tr>
+        <td class="field">开始时间：</td>
+        <td>
+            <input id="startDate" type="date" data-date-format="DD MMMM YYYY" value="2017-01-01">
+            &nbsp; &nbsp;
+            <a id="startDateReset" href="javascript:void(0);">Reset</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="field">时间段：</td>
+        <td>
+            <input id="dateRange" type="number" min="2" max="15" style="width: 50px;">&nbsp;天
+        </td>
+    </tr>
+    <tr>
+        <td class="field">间隔时间：</td>
+        <td>
+            <input id="interval" type="number" min="3" style="width: 50px;">&nbsp;秒
+        </td>
+    </tr>
+    <tr>
+        <td class="field">自动登录：</td>
+        <td>
+            <input id="autoLogin" type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td class="field">&nbsp;</td>
+        <td id="auto_row">
+            <div style="padding-bottom: 5px;">
+                <label>帐号：</label>&nbsp;
+                <input id="account" type="text" minlength="8">
+            </div>
+            <div>
+                <label>密码：</label>&nbsp;
+                <input id="password" type="password" minlength="8">
+            </div>
+        </td>
+    </tr>
+</table>
+<div style="text-align: center;padding: 10px;">
+    <input type="button" id="save" value="保存">
+</div>
+
+</body>
+
+</html>

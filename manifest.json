@@ -1,0 +1,44 @@
+﻿{
+  "name": "Seller Order Helper",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Order",
+  "background": {
+    "scripts": [
+      "common.js",
+      "background.js",
+      "jquery-2.1.1.min.js",
+      "aes.js"
+    ]
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Seller Order Helper",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "storage",
+    "<all_urls>",
+    "http://*.xxxxxx.cn/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "common.js",
+        "jquery-2.1.1.min.js",
+        "contentscript.js"
+      ]
+    }
+  ]
+}
